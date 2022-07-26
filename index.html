@@ -2,30 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <script src="./script.js"></script>
+  <script type="module" src="main.js"></script>
   <title>WMS</title>
 </head>
 
 <body>
-  <table border="1" align="center" width="80%" cellspacing="0" class="first_board">
+  <h1>СОСТОЯНИЕ РМ:</h1>
+
+  <table border="1" width="90%" cellspacing="0" class="first_board">
     <thead align="center">
       <tr>
-        <th id="g_col_1" scope="col">Тип задания</th>
-        <th id="g_col_2" scope="col">Приоритет</th>
-        <th id="g_col_3" scope="col">Состояние</th>
-        <th id="g_col_4" scope="col">Код товара</th>
-        <th id="g_col_5" scope="col">Наименование товара</th>
-        <th id="g_col_6" scope="col">Количество в задании</th>
-        <th id="g_col_7" scope="col">
+        <th id="g_col_head_1">Тип задания</th>
+        <th id="g_col_head_2">Приоритет</th>
+        <th id="g_col_head_3">Состояние</th>
+        <th id="g_col_head_4">Код товара</th>
+        <th id="g_col_head_5">Наименование товара</th>
+        <th id="g_col_head_6">Количество в задании</th>
+        <th id="g_col_head_7">
           <span>Из партии</span>
           <hr>
           <span>В партию</span>
         </th>
-        <th id="g_col_8" align="center" scope="col" align="center">БН</th>
+        <th id="g_col_head_8">БН</th>
       </tr>
     </thead>
     <!-- ///////////////////////////////// -->
@@ -85,31 +89,19 @@
     </tr>
   </table>
 
-  <table border="1" align="center" width="45%" cellspacing="0" class="second_board">
+  <table border="1" width="60%" cellspacing="0" class="second_board">
     <thead align="center">
       <tr>
-        <th id="g_col_1" scope="col">Тип задания</th>
-        <th id="g_col_2" scope="col">Приоритет</th>
-        <th id="g_col_3" scope="col">Состояние</th>
+        <th id="d_col_1">Заголовок</th>
+        <th id="d_col_2">Заголовок</th>
+        <th id="d_col_2">Заголовок</th>
       </tr>
     </thead>
     <!-- ///////////////////////////////// -->
     <tr align="center">
-      <td>Отбор</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-    </tr>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Отбор</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-    </tr>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Прием</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
+      <td id="d_row_1">Ячейка</td>
+      <td id="d_row_2">Ячейка</td>
+      <td id="d_row_3">Ячейка</td>
     </tr>
   </table>
 </body>
