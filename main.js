@@ -2,10 +2,14 @@ function getInfo() {
   fetch('http://localhost:44932/GetInformation/WSS?geoKey=WSS', {
   method: 'GET',
   headers: {
-    'Content-Type': 'text/plain'
+    'Content-Type': 'text/plain; charset=utf-8',
+    // 'Content-Type': 'text/plain', 
+    'server': 'Microsoft-IIS/8.5',
+    'transfer-encoding': 'chunked', 
+    'x-powered-by': 'ASP.NET', 
   },
   mode: 'no-cors'
-})
+})  
 .then(data => console.log(data))
 }
 
