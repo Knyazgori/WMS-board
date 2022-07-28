@@ -12,10 +12,25 @@ h1 {
   text-align: center;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__time {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 4em;
+}
+
 .first_board {
-  margin: 40px auto; 
+  margin: 40px auto;
+  min-height: 400px; 
 }
 
 .second_board {
   margin: 40px auto;
+  min-height: 100px; 
 }

@@ -9,13 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="main.js"></script>
+  <script src="time.js" defer></script>
   <title>WMS</title>
 </head>
 
 <body>
-  <h1>СОСТОЯНИЕ РМ:</h1>
-
-  <table border="1" width="90%" cellspacing="0" class="first_board">
+  <div class="header">
+    <img src="./img/logo.png" alt="logo">
+    <h1 id="status">СОСТОЯНИЕ РМ:</h1>
+    <p id="time" class="header__time"></p>
+  </div>
+  <table border="1" width="100%" cellspacing="0" class="first_board" id="first_board">
     <thead align="center">
       <tr>
         <th id="g_col_head_1">Тип задания</th>
@@ -32,78 +36,15 @@
         <th id="g_col_head_8">БН</th>
       </tr>
     </thead>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Отбор</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-      <td>Ячейка 4</td>
-      <td>Ячейка 5</td>
-      <td>Ячейка 6</td>
-      <td>Ячейка 7</td>
-      <td>Ячейка 8</td>
-    </tr>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Отбор</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-      <td>Ячейка 4</td>
-      <td>Ячейка 5</td>
-      <td>Ячейка 6</td>
-      <td>Ячейка 7</td>
-      <td>Ячейка 8</td>
-    </tr>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Прием</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-      <td>Ячейка 4</td>
-      <td>Ячейка 5</td>
-      <td>Ячейка 6</td>
-      <td>Ячейка 7</td>
-      <td>Ячейка 8</td>
-    </tr>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Проверка</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-      <td>Ячейка 4</td>
-      <td>Ячейка 5</td>
-      <td>Ячейка 6</td>
-      <td>Ячейка 7</td>
-      <td>Ячейка 8</td>
-    </tr>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td>Пустой</td>
-      <td>Ячейка 2</td>
-      <td>Ячейка 3</td>
-      <td>Ячейка 4</td>
-      <td>Ячейка 5</td>
-      <td>Ячейка 6</td>
-      <td>Ячейка 7</td>
-      <td>Ячейка 8</td>
-    </tr>
   </table>
-
-  <table border="1" width="60%" cellspacing="0" class="second_board">
+  <table border="1" width="80%" cellspacing="0" class="second_board" id="second_board">
     <thead align="center">
       <tr>
-        <th id="d_col_1">Заголовок</th>
-        <th id="d_col_2">Заголовок</th>
-        <th id="d_col_2">Заголовок</th>
+        <th id="d_col_1">Всего заданий</th>
+        <th id="d_col_2">В работе</th>
+        <th id="d_col_2">В ожидании</th>
       </tr>
     </thead>
-    <!-- ///////////////////////////////// -->
-    <tr align="center">
-      <td id="d_row_1">Ячейка</td>
-      <td id="d_row_2">Ячейка</td>
-      <td id="d_row_3">Ячейка</td>
-    </tr>
   </table>
 </body>
-
 </html>
