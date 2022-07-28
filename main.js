@@ -179,7 +179,7 @@ function createTableBody() {
 
   for (let i = 0; i < rows; i = i + 1) {
     table.innerHTML += (`
-    <tr align="center" id=col_${i + 1}>
+    <tr align="center" id="col_1_${i + 1}">
       <td>${response.Data.Tasks.Task[i].TaskType || ''}</td>
       <td>${response.Data.Tasks.Task[i].Priority || ''}</td>
       <td>${response.Data.Tasks.Task[i].TaskStaus || ''}</td>
@@ -198,7 +198,7 @@ function createTableBody() {
 
   // Дополнительная таблица 
   secondTable.innerHTML += (`
-    <tr align="center" id="col_2">
+    <tr align="center" id="col_2_2">
       <td>${response.Data.Total.TotTasks || ''}</td>
       <td>${response.Data.Total.WrkTasks || ''}</td>
       <td>${response.Data.Total.NewTasks || ''}</td>
@@ -222,7 +222,5 @@ createTableBody()
 //   })
 //     .then(data => console.log(data))
 // }
-
 // getInfo()
-
 
