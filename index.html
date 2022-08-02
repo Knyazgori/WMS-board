@@ -10,41 +10,17 @@
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="main.js"></script>
   <script src="time.js" defer></script>
+  <script id="RefreshPages" data-src=@ViewBag.updateTime src="main.js"></script>
   <title>WMS</title>
 </head>
 
 <body>
   <div class="header">
     <img src="./img/logo.png" alt="logo">
-    <h1 id="status">СОСТОЯНИЕ РМ:</h1>
+    <h1 id="status">СОСТОЯНИЕ РМ: <span id="status_now"></span></h1>
     <p id="time" class="header__time"></p>
   </div>
-  <table border="1" width="100%" cellspacing="0" class="first_board" id="first_board">
-    <thead align="center">
-      <tr>
-        <th id="g_col_head_1">Тип задания</th>
-        <th id="g_col_head_2">Приоритет</th>
-        <th id="g_col_head_3">Состояние</th>
-        <th id="g_col_head_4">Код товара</th>
-        <th id="g_col_head_5">Наименование товара</th>
-        <th id="g_col_head_6">Количество в задании</th>
-        <th id="g_col_head_7">
-          <span>Из партии</span>
-          <hr>
-          <span>В партию</span>
-        </th>
-        <th id="g_col_head_8">БН</th>
-      </tr>
-    </thead>
-  </table>
-  <table border="1" width="80%" cellspacing="0" class="second_board" id="second_board">
-    <thead align="center">
-      <tr>
-        <th id="d_col_1">Всего заданий</th>
-        <th id="d_col_2">В работе</th>
-        <th id="d_col_2">В ожидании</th>
-      </tr>
-    </thead>
-  </table>
+  <div id="general_table"></div>
+  <div id="second_table"></div>
 </body>
 </html>

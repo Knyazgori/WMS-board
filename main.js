@@ -1,226 +1,107 @@
-const response = {
-  Data: {
-    WrkStation: "ВСЕ РАБОЧИЕ МЕСТА",
-    State: "Занято",
-    Tasks: {
-      Task:
-        [
-          {
-            TaskType: "ОТБОР",
-            Priority: "99",
-            TaskStaus: "НОВОЕ",
-            PrdCode: "2081482",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "1987",
-            LotFrom: "08D/1799",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР12",
-            Priority: "9912",
-            TaskStaus: "НОВОЕ12",
-            PrdCode: "208148212",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N12",
-            Amount: "11222222987",
-            LotFrom: "08D/112799",
-            LotTo: "BUXT/1799.212",
-            BigNum: "256123"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          {
-            TaskType: "ОТБОР1",
-            Priority: "991",
-            TaskStaus: "НОВОЕ1",
-            PrdCode: "20814821",
-            PrdDesc: "м ВВГнгАLSLTx4х1.5(N",
-            Amount: "19871",
-            LotFrom: "08D/179111",
-            LotTo: "BUXT/1799.2",
-            BigNum: "2563111"
-          },
-          
-        ],
-    },
-    Total: {
-      TotTasks: "2",
-      WrkTasks: "2",
-      NewTasks: "0"
-    }
-  }
+async function fetchData() {
+  const data = await fetch('http://localhost:44932/GetInformation/WST?geoKey=WST', {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'server': 'Microsoft-IIS/8.5',
+          'transfer-encoding': 'chunked',
+          'x-powered-by': 'ASP.NET',
+      },
+      mode: 'no-cors'
+  })
+  const response = await data.json()
+  return response
 }
 
-
-function createTableBody() {
-  // Главная таблица
-  let rows = response.Data.Tasks.Task.length;
-  let table = document.getElementById('first_board')
-  let secondTable = document.getElementById('second_board')
-
-  for (let i = 0; i < rows; i = i + 1) {
-    table.innerHTML += (`
-    <tr align="center" id="col_1_${i + 1}">
-      <td>${response.Data.Tasks.Task[i].TaskType || ''}</td>
-      <td>${response.Data.Tasks.Task[i].Priority || ''}</td>
-      <td>${response.Data.Tasks.Task[i].TaskStaus || ''}</td>
-      <td>${response.Data.Tasks.Task[i].PrdCode || ''}</td>
-      <td>${response.Data.Tasks.Task[i].PrdDesc || ''}</td>
-      <td>${response.Data.Tasks.Task[i].Amount || ''}</td>
-      <td><span>${response.Data.Tasks.Task[i].LotFrom || ''}</span><hr /><span>${response.Data.Tasks.Task[i].LotTo || ''}</span></td>
-      <td>${response.Data.Tasks.Task[i].BigNum || ''}</td>
-    </tr>
-    `)
+// Первая таблица
+function renderTable(rows) {
+  function renderHeader() {
+      let header = `
+          <tr>
+              <th id="g_col_head_1">Тип задания</th>
+              <th id="g_col_head_2">Приоритет</th>
+              <th id="g_col_head_3">Состояние</th>
+              <th id="g_col_head_4">Код товара</th>
+              <th id="g_col_head_5">Наименование товара</th>
+              <th id="g_col_head_6">Количество в задании</th>
+              <th id="g_col_head_7">
+              <span>Из партии</span>
+              <hr>
+              <span>В партию</span>
+              </th>
+              <th id="g_col_head_8">БН</th>
+          </tr>`
+      return header;
   }
 
-  // Состояние рм
-  const h1 = document.getElementById('status')
-  h1.innerText += ` ${response.Data.State}`
+  function renderRow(item, key) {
+      let row = '';
+      for (let i = 0; i < key; i++) {
+          row += `
+              <tr align="center">
+                  <td>${item[i].TaskType || ''}</td>
+                  <td>${item[i].Priority || ''}</td>
+                  <td>${item[i].TaskStaus || ''}</td>
+                  <td>${item[i].PrdCode || ''}</td>
+                  <td>${item[i].PrdDesc || ''}</td>
+                  <td>${item[i].Amount || ''}</td>
+                  <td><span>${item[i].LotFrom || ''}</span><hr /><span>${item[i].LotTo || ''}</span></td>
+                  <td>${item[i].BigNum || ''}</td>
+              </tr>`
+      }
+      return row;
+  }
 
-  // Дополнительная таблица 
-  secondTable.innerHTML += (`
-    <tr align="center" id="col_2_2">
-      <td>${response.Data.Total.TotTasks || ''}</td>
-      <td>${response.Data.Total.WrkTasks || ''}</td>
-      <td>${response.Data.Total.NewTasks || ''}</td>
-    </tr>
-  `)
+  let table = '<table border="1" width="100%" cellspacing="0" class="first_board" id="first_board"><thead align="center">';
+  table += renderHeader();
+  table += '</thead><tbody>';
+  table += renderRow(rows.Data.Tasks[0].Task, rows.Data.Tasks[0].Task.length);
+  table += '</tbody></table>';
+  return table;
 };
 
-createTableBody()
+// Вторая таблица
+function renderSecondTable(data) {
+  function renderHeader() {
+      let header = `
+    <tr>
+      <th id="d_col_1">Всего заданий</th>
+      <th id="d_col_2">В работе</th>
+      <th id="d_col_2">В ожидании</th>
+    </tr>`
+      return header;
+  }
 
-// function getInfo() {
-//   fetch('http://localhost:44932/GetInformation/WSS?geoKey=WSS', {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'text/plain; charset=utf-8',
-//       // 'Content-Type': 'text/plain', 
-//       'server': 'Microsoft-IIS/8.5',
-//       'transfer-encoding': 'chunked',
-//       'x-powered-by': 'ASP.NET',
-//     },
-//     mode: 'no-cors'
-//   })
-//     .then(data => console.log(data))
-// }
-// getInfo()
+  function renderRow(item) {
+      let row = '';
+      row += `
+    <tr align="center">
+      <td>${item.TotTasks || ''}</td>
+      <td>${item.WrkTasks || ''}</td>
+      <td>${item.NewTasks || ''}</td>
+    </tr>`
+      return row;
+  }
 
+  let table = '<table border="1" width="100%" cellspacing="0" class="second_board" id="second_board"><thead align="center">';
+  table += renderHeader();
+  table += '</thead><tbody>';
+  table += renderRow(data.Data.Total);
+  table += '</tbody></table>';
+  return table;
+}
+
+// Статус
+function renderDocumentState(data) {
+  return ` ${data.Data.State}`
+}
+const doc = document.getElementById("RefreshPages")
+const keys = doc.dataset.src
+setInterval(function () {
+
+  fetchData().then(res => {
+      document.getElementById('general_table').innerHTML = renderTable(res)
+      document.getElementById('second_table').innerHTML = renderSecondTable(res)
+      document.getElementById('status_now').innerHTML = renderDocumentState(res)
+  })
+}, Number(keys) * 1000);
