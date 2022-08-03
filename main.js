@@ -1,5 +1,5 @@
-async function fetchData() {
-  const data = await fetch('http://localhost:44932/GetInformation/WST?geoKey=WST', {
+async function fetchData(key, geoKey) {
+  const data = await fetch(`http://localhost:44932/GetInformation/WST?key=${key || 'WSS'}&geoKey=${geoKey || 'WSS'}`, {
       method: 'GET',
       headers: {
           'Content-Type': 'text/plain; charset=utf-8',
@@ -97,11 +97,15 @@ function renderDocumentState(data) {
 }
 const doc = document.getElementById("RefreshPages")
 const keys = doc.dataset.src
+let queryObj = {}
+window.location.search.substring(1).split('&').forEach((item) => {
+  let param = item.split('=')
+  queryObj[param[0]] = param[1]
+})
 setInterval(function () {
-
-  fetchData().then(res => {
+  fetchData(queryObj.key, queryObj.geoKey).then(res => {
       document.getElementById('general_table').innerHTML = renderTable(res)
       document.getElementById('second_table').innerHTML = renderSecondTable(res)
       document.getElementById('status_now').innerHTML = renderDocumentState(res)
   })
-}, Number(keys) * 1000);
+}, keys ? Number(keys) * 1000 : 10000);
